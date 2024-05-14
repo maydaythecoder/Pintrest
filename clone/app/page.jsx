@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <>
-    <div className='p-3'>
+    <div className='p-3 pt-20'>
       <PinList listOfPins={listOfPins} />
       </div>
     </>

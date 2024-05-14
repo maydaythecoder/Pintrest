@@ -35,10 +35,8 @@ function Header() {
   };
 
   return (
-    <div
-      className="flex justify-between 
-     gap-3 md:gap-2 items-center p-6 align-middle lg:h-20"
-    >
+    <div className="fixed top-0 left-0 right-0 z-50 shadow-md flex justify-between gap-3 md:gap-2 items-center p-6 align-middle lg:h-20 bg-white">
+
       <Image
         src="/logo.png"
         alt="logo"
@@ -49,28 +47,28 @@ function Header() {
         rounded-full cursor-pointer"
       />
       <button
-        className="bg-black
-         text-white p-2 px-3 rounded-full
+        className="bg-white font-bold
+         text-black p-2 px-3 rounded-full
          text-[15px]
-          hidden md:block"
+          hidden md:block hover:text-white hover:bg-black hover:font-bold"
         onClick={() => router.push("/")}
       >
         Home
       </button>
 
       <button
-        className="bg-black
-         text-white p-2 rounded-full
+        className="bg-white font-bold
+         text-black p-2 rounded-full
          text-[15px]
-          hidden md:block"
+          hidden md:block hover:text-white hover:bg-black hover:font-bold"
         onClick={() => router.push("/")}
       >
         Explore
       </button>
 
       <button
-        className="font-semibold p-2 px-3
-         rounded-full text-[15px]"
+        className="font-semibold p-2 px-4
+         rounded-full text-[15px] hover:text-white hover:bg-black hover:font-bold"
         onClick={() => onCreateClick()}
       >
         Create
@@ -93,8 +91,8 @@ function Header() {
         className="text-[15px] 
         text-gray-500 md:hidden"
       />
-      <HiBell className="text-[20px] md:text-[40px] text-gray-500 cursor-pointer" />
-      <HiChat className="text-[20px] md:text-[40px] text-gray-500 cursor-pointer" />
+      <HiBell className="text-[20px] md:text-[30px] text-gray-500 cursor-pointer" />
+      <HiChat className="text-[20px] md:text-[30px] text-gray-500 cursor-pointer" />
       {session?.user ? (
         <Image
           src={session.user.image}
